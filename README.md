@@ -1,6 +1,7 @@
 # Communication_multimedia
 Communication_multimedia
 
+the streaming server use nginx as both the server for the http (for hls )and rtmp
 Streaming using the sofware encodeur OBS that ypload using the rtmp protcol to server with ip adress of 94.245.92.135
 ![image](https://user-images.githubusercontent.com/68382823/118396884-dcec1e00-b651-11eb-9283-b31052d06823.png)
 
