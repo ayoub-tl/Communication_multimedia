@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+    <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-dark ">
+        <div class="container bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark">
+                <a class="navbar-brand text-light" href="#">Video Streaming</a>
+            </nav>
+        </div>
+
+
+    </nav>
+    <div class="d-flex justify-content-around " style="margin-top:100px">
+        <div style='width:40%' class="text-center">
+            <video style="background-color:#444; width:100%;height:300px" controls muted="muted" autoplay>
+                <source src="/video" type="video/mp4">
+
+            </video>
+            <br>
+            Video Strsaming
+        </div>
+        <div style='width:40%' class="text-center">
+            <video id='hls-example' class="video-js vjs-default-skin" width="500" height="300" controls>
+                <source type="application/x-mpegURL" src="http://94.245.92.135:8080/hls/test-stream.m3u8">
+
+            </video>
+            <br> Live streaming
+        </div>
+    </div>
+
+
+    <script>
+        var player = videojs('hls-example');
+        player.play();
+    </script>
+</body>
+
+</html>
